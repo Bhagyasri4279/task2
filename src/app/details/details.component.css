@@ -1,0 +1,44 @@
+#content{
+  height: 100%;
+  padding: 0 20px;
+}
+
+#content > div{
+  padding: 70px 0;
+}
+
+table {
+  width: 100%;
+}
+
+.button {
+  position: absolute;
+  
+}
+
+.buttonc{
+  text-align: center;
+}
+
+
+.search{
+  
+  height: 50px;
+  width: 200px;
+}
+.go{
+  height: 50px;
+  width: 50px;
+}
+
+
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.sclass {
+  width: 100%;
+}

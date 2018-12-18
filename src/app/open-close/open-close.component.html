@@ -1,0 +1,36 @@
+<br><br><br>
+<!-- <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div> -->
+
+<br><br><br><br>
+
+<nav class="b">
+  
+  <button (click)="toggle()">Click to Open/Close</button>
+</nav>
+<br>
+<div [@.disabled]="isDisabled">
+  <div [@openClose]="isOpen ? 'open' : 'closed'"
+    class="open-close-container">
+    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+  </div>
+</div>
+
+<br><br><br>
+
+
+<!-- <nav>
+  <button (click)="toggle1()">Toggle Status</button>
+</nav>
+
+<div [@slideStatus]="status" class="box">
+  {{ status == 'active' ? 'Active' : 'Inactive' }}
+</div> -->
+
+
+<br><br><br>
+<div class="buttonc">
+<button  class="button"  (click)="backPage()">Back</button><br><br><br>
+</div>
+<br><br><br><br>

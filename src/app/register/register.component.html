@@ -1,0 +1,96 @@
+<br><br><br><br>
+
+<h1 style="text-align: center">Registration Form</h1><br>
+
+
+
+ <mat-card>
+
+  <mat-card-content>  
+    
+      <form [formGroup]="RegForm">      
+                  
+                      <mat-form-field class="mff">  
+                          <input formControlName="name" matInput placeholder="Enter Name">  
+                      </mat-form-field>  
+                      <mat-error>  
+                          <span *ngIf="!RegForm.get('name').valid && RegForm.get('name').touched">
+                            Please enter  Name </span>  
+                      </mat-error>  
+                  
+                  
+                      <mat-form-field class="mff">  
+                          <input formControlName="id" matInput placeholder="Enter ID">  
+                      </mat-form-field>  
+                      <mat-error>  
+                          <span *ngIf="RegForm.controls['id'].hasError('required') && RegForm.get('id').touched">  
+                              Please enter ID 
+                              </span>  
+                              <span *ngIf="RegForm.controls['id'].hasError('minlength') ">  
+                                 Id min Length is  4
+                                 </span>  
+                      </mat-error>  
+
+                      <mat-form-field class="mff">  
+                          <input formControlName="mobile" matInput placeholder="Enter Mobile">  
+                      </mat-form-field>  
+                      <mat-error>  
+                          <span *ngIf="RegForm.controls['mobile'].hasError('required') && RegForm.get('mobile').touched ">  
+                              Mobile number  is required  
+                              </span>  
+                              <span *ngIf="RegForm.controls['mobile'].hasError('pattern') ">  
+                                  Enter numbers only !!! 
+                              </span>  
+                              <span *ngIf="RegForm.controls['mobile'].hasError('minlength') ">  
+                                  Min Length of 10
+                                 </span>  
+                                 <span *ngIf="RegForm.controls['mobile'].hasError('maxlength') ">  
+                                 Max Length of 10 
+                             </span>  
+                            
+                      </mat-error>  
+                  
+                  
+                      <mat-form-field class="mff">  
+                          <input formControlName="email" matInput placeholder="Enter email">  
+                      </mat-form-field>  
+                      <mat-error>  
+                          <span *ngIf=" RegForm.controls['email'].hasError('required') && RegForm.get('email').touched">  
+                              Please enter Email  
+                              </span>  
+                              <span *ngIf="RegForm.controls['email'].hasError('email') ">  
+                                 Please enter valid email
+                                 </span>  
+                            
+                      </mat-error>  
+
+                      <mat-form-field class="mff">  
+                          <input formControlName="project" matInput placeholder="Enter Project Name">  
+                      </mat-form-field>  
+                      <mat-error>  
+                          <span *ngIf="!RegForm.get('project').valid && RegForm.get('project').touched">
+                            Please enter Project Name </span>  
+                      </mat-error>  
+
+        <button  mat-raised-button color="accent" [disabled]="!RegForm.valid" (click)="onSubmit(RegForm.value)">Add</button> 
+                  
+                  <!-- <button type="submit" [disabled]="!RegForm.valid">ADD</button> -->
+
+              </form>
+
+
+  </mat-card-content>  
+
+ </mat-card>
+
+
+<br><br><br>
+
+ <div class="buttonc">
+
+        <button type="button" class="button" (click)="empPage()">Emp Details Page</button><br><br>
+     
+      <button type="button" class="button" (click)="backPage()">  ----- Go Back ----- </button>
+  </div>
+
+<br><br><br><br>

@@ -1,0 +1,52 @@
+#content{
+    height: 100%;
+    padding: 0 20px;
+  }
+  
+  #content > div{
+    padding: 70px 0;
+  }
+  
+  .button {
+    position: absolute;
+    
+}
+
+.buttonc{
+  text-align: center;
+}
+
+.main-cont {
+  width: 95%;
+  height: 400px;
+  position: static;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.table-data {
+ left:10px;
+  width: 100%;
+  /* position:absolute; */
+  top:0px;
+  bottom:0px;
+  left:0px;   
+}
+.material{
+  /* position: static; */
+  margin-left:15%;
+  
+}
+
+.emp-sidenav {
+  padding: 20px;
+  width: 300px;
+  height: 400px;
+  margin-top: 270px;
+  
+}
+
+
+ul{
+  list-style-type: none;
+}
+

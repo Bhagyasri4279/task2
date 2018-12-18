@@ -1,0 +1,84 @@
+<div id="content" style="background-color:rgb(236, 235, 236)">
+
+
+<br><br><br><br>
+<h1 style="text-align: center">PRODUCTS &nbsp; LIST</h1>
+
+<!-- <ul>
+  <li *ngFor="let p of Products"> {{p.name}}<br><br></li>
+ 
+</ul> -->
+
+
+<div style="background-color:#eee">
+    <br><br><br>
+
+    <div fxLayout
+       fxLayout.xs="column"
+       fxLayoutAlign="center"
+       fxLayoutGap="5px"
+       fxLayoutGap.xs="0">
+    
+  
+      <div class="item1" fxFlex>
+        <div class="card1">
+        <img src="/assets/m1.jfif" alt="OPPO F1S" style="width:100%; ">
+       <br><br> <strong>OPPO F1S</strong>
+        <p class="title">COST: 19000</p>
+        <p><button mat-raised-button (click)="openDialog()">ADD TO CART</button></p><br>
+        </div>
+      </div>
+           
+    
+      <div class="item1" fxFlex>
+        <div class="card1">
+        <img src="/assets/m2.jfif" alt="RED MI " style="width:100%; "><br><br>
+        <strong>REDMI NOTE 5 PRO </strong>
+        <p class="title">COST: 15000</p>
+        <p><button mat-raised-button (click)="openDialog()">ADD TO CART</button></p>
+        <br>
+        </div>     
+      </div>
+    
+      <div class="item1" fxFlex>
+          <div class="card1">
+          <img src="/assets/m3.jfif" alt="HONOR" style="width:100%; "><br><br>
+          <strong>HONOR </strong>
+          <p class="title">COST: 12000</p>
+          <p><button mat-raised-button (click)="openDialog()">ADD TO CART</button></p><br>
+          </div>     
+        </div>
+
+
+        <div class="item1" fxFlex>
+            <div class="card1">
+            <img src="/assets/m4.jfif" alt="NOKIA" style="width:100%; ">
+           <br><br> <strong>NOKIA</strong>
+            <p class="title">COST: 23000</p>
+            <p><button mat-raised-button (click)="openDialog()">ADD TO CART</button></p><br>
+            </div>
+          </div>
+
+          <div class="item1" fxFlex fxHide [fxHide.gt-sm]="false">
+            <div class="card1">
+            <img src="/assets/m5.jfif" alt="SAMSUNG" style="width:100%; ">
+           <br><br> <strong>SAMSUNG</strong>
+            <p class="title">COST: 9000</p>
+            <p><button mat-raised-button (click)="openDialog()">ADD TO CART</button></p><br>
+            </div>
+          </div>
+
+    
+    </div>
+
+    <br><br><br>
+
+    </div>
+
+<br>
+<div class="buttonc">
+    <button mat-raised-button type="button" style="width:10%;"  (click)="backPage()">Back</button>
+</div>
+<br><br><br><br>
+</div>
+

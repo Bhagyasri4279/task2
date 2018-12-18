@@ -1,0 +1,181 @@
+
+<div id="content" style="background-color:rgb(246, 248, 241)">
+<br>
+<br>
+<br>
+<br>
+<h1 style="text-align:center">Employee Details Page</h1>
+
+
+
+<input
+  type='text'
+  style='padding:8px;margin:15px auto;width:30%;'
+  placeholder='Search here..'
+  (keyup)='updateFilter($event)'/>
+ <br><br><br>
+
+  <!-- <ngx-datatable
+  #table
+  class='material'
+  [columns]="columns"
+  [columnMode]="'force'"
+  [headerHeight]="60"
+  [footerHeight]="50"
+  [rowHeight]="45"
+  [limit]="10"
+  [rows]='rows'
+  [selected]="selected"
+  [selectionType]="'single'"
+  (activate)="onActivate($event)"
+  (select)='onSelect($event)'>
+  </ngx-datatable> -->
+  
+  
+
+  <!-- <div class='selected-column'>
+      <h4 >Selected EMPLOYEE details</h4>
+      <ul>
+        <li *ngFor='let s of selected'>
+        <strong> NAME:</strong>  {{s.name}} <br><br>
+        <strong> ID:</strong> {{s.id}}     <br><br>
+        <strong> EMAIL:</strong> {{s.email}} <br><br>
+        <strong> MOBILE:</strong> {{s.mobile}} <br><br>
+         <strong> PROJECT:</strong>{{s.project}} <br><br>
+        </li>
+        <li *ngIf="!selected.length">No EMPLOYEE selected</li>
+      </ul>
+   </div> -->
+  
+  
+   
+
+      <mat-sidenav-container class="main-cont">
+
+        <mat-sidenav #sidenav class="emp-sidenav">
+          
+            <h3>Selected EMPLOYEE details</h3><br>
+            <ul>
+              <li *ngFor="let res of selected">
+              <strong> NAME:</strong>  {{res.name}} <br><br>
+              <strong> ID:</strong> {{res.id}}     <br><br>
+              <strong> EMAIL:</strong> {{res.email}} <br><br>
+              <strong> MOBILE:</strong> {{res.mobile}} <br><br>
+               <strong> PROJECT:</strong>{{res.project}} <br><br>
+              </li>
+              <li *ngIf="!selected.length">No EMPLOYEE selected</li>
+            </ul>
+
+        </mat-sidenav>
+
+      
+        <div class="table-data">
+
+          <ngx-datatable
+          #table
+          class='material'
+          [columns]="columns"
+          [columnMode]="'force'"
+          [headerHeight]="60"
+          [footerHeight]="50"
+          [rowHeight]="45"
+          [limit]="10"
+          [rows]='rows'
+          [scrollbarV]="false"
+         [scrollbarH]="true"
+          [selected]="selected"
+          [selectionType]="'single'"
+          (activate)="onActivate($event)"
+          (select)='onSelect($event)'
+          (click)="sidenav.open()">
+          </ngx-datatable>
+
+        </div>
+      </mat-sidenav-container>
+    
+          <br> 
+
+  <h3>Click an employee to  view the details</h3>
+    <!-- <div>
+
+    <ngx-datatable 
+        #table
+        class="material fullscreen"
+        
+        columnMode="force"
+        [headerHeight]="80"
+        [footerHeight]="50"
+        [rowHeight]="50"
+        [scrollbarV]="false"
+        [scrollbarH]="true"
+        [limit]="10"
+        [rows]="rows">
+      
+
+        <ngx-datatable-column name="ID" [width]="100">   
+            <ng-template let-value="value" ngx-datatable-cell-template>
+               <strong>{{value}}</strong>
+           </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="name" [width]="300">
+                <ng-template let-value="value" ngx-datatable-cell-template>
+                        <strong>{{value}}</strong>
+                 </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="EMAIL" [width]="300"></ngx-datatable-column>
+        <ngx-datatable-column name="MOBILE" [width]="300">
+                <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+                <span
+                (dblclick)="editing[rowIndex + '-mobile'] = true"
+                *ngIf="!editing[rowIndex + '-mobile']">
+                {{value}}
+              </span>
+              <input
+                autofocus
+                (blur)="updateValue($event, 'mobie', rowIndex)"
+                *ngIf="editing[rowIndex+ '-mobile']"
+                type="number"
+                [value]="value">
+               </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="PROJECT" [width]="300">
+                <ng-template let-value="value" ngx-datatable-cell-template>
+                        <strong>{{value}}</strong>
+                </ng-template>
+        </ngx-datatable-column>
+        
+      </ngx-datatable>
+
+    </div> -->
+
+
+
+    <!-- <ol>
+        <li>
+          <mat-form-field>
+            <input matInput [(ngModel)]="name" placeholder="Enter name">
+          </mat-form-field>
+        </li>
+        <li>
+          <button mat-raised-button (click)="openDialog()">Select Place</button>
+        </li><br>
+        <li *ngIf="place">
+          Your fav place is : <i>{{place}}</i>
+        </li>
+      </ol> -->
+<br><br>
+
+
+<p>Bottom Sheet</p>
+
+<button mat-raised-button (click)="openBottomSheet()">Open file</button>
+
+
+  <br>
+<div class="buttonc">
+<button  class="button" (click)="backPage()">Back</button>
+</div>
+
+
+<br><br><br><br>
+</div>

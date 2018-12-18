@@ -1,0 +1,40 @@
+#content{
+    height: 100%;
+    padding: 0 20px;
+  }
+  
+  #content > div{
+    padding: 70px 0;
+  }
+  
+  .card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 190px;
+    text-align: center;
+    font-family: arial;
+    
+  }
+  
+  .title {
+    color: grey;
+    font-size: 14px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 2px;
+    color: white;
+    background-color: rgb(67, 61, 155);
+    text-align: center;
+    cursor: pointer;
+    
+    font-size: 12px;
+  }
+
+  
+.buttonc{
+  text-align: center;
+  
+}

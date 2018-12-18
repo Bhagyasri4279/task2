@@ -1,0 +1,31 @@
+<html>
+
+<nav class="main-nav">
+<div>
+<img src="logo2.png">
+</div>
+<div style="background-color:lightblue;text-align:center;"><h1>THE MIRACLE</h1></div>
+<span style ="flex:1 1 auto"></span>
+  <ul>
+    
+    <!-- <li><img src="/assets/cart.png" style="max-width:30%;max-height:30%;"></li> -->
+    <!-- <li><input type="text" style="width:40%;text-align: center;" placeholder="No: Items" value="{{cn}}"></li> -->
+    <li> <span matBadge="{{cn}}" matBadgeOverlap="true" matBadgeColor="warn"><img src="/assets/cart.png" style="max-width:30%;max-height:30%;"></span></li>
+    <!-- <li><mat-icon matBadge="{{cn}}" matBadgeColor="warn">home</mat-icon></li> -->
+    <li><a routerLink="/home">About</a></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Services</a></li>
+	
+  </ul>
+
+</nav>
+
+<router-outlet></router-outlet>
+
+
+<div class="footer" style="height:60px;">
+  <h1 style="text-align: center">Copyrights @2018 Miracle</h1>
+</div>
+
+</html>

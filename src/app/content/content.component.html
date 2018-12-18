@@ -1,0 +1,81 @@
+
+<div id="content" style="background-color:rgb(245, 248, 245);">
+<br>
+<br>
+<br>
+<br><br>
+<h1 style="text-align: center;">Departments list</h1>
+<div>
+<ul>
+  <li *ngFor="let dep of DepList;let i=index;"> {{i+1}} : {{dep.name}}<br><br></li>
+  
+</ul>
+<router-outlet></router-outlet>
+
+<br>
+</div>
+
+<!-- 
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="dial">
+    <mat-icon>dialpad</mat-icon>
+    <span>Redial</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voicemail</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Disable alerts</span>
+  </button>
+</mat-menu><br>
+
+<mat-menu #dial>
+  <button mat-menu-item>Insects</button>
+  <button mat-menu-item>Molluscs</button>
+  <button mat-menu-item>Crustaceans</button>
+  <button mat-menu-item>Corals</button>
+  <button mat-menu-item>Arachnids</button>
+  <button mat-menu-item>Velvet worms</button>
+  <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu>
+
+ -->
+
+<div style="text-align:center">
+
+ <div class="container p-4">
+  <div class="row">
+    <div class="col text-center">
+      <button (click)="changeState('state2')" class="btn btn-danger">Change To State 2</button>
+    </div><br><br>
+    <div class="col text-center">
+      <button (click)="changeState('state1')" class="btn btn-info">Change To State 1</button>
+    </div>
+  </div>
+  <div class="row">
+    <app-animate [currentState]="toState"></app-animate>
+  </div>
+</div>
+
+
+
+
+ <nav>
+  <a id="open-close" routerLink="/open-close" routerLinkActive="active">Open/Close Component</a>
+</nav>
+  
+<div [@routeAnimations]="prepareRoute(outlet)" >
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
+
+<br><br><br>
+<button  (click)="backPage()">Back</button>
+</div><br><br><br><br>
+</div>
+
+
