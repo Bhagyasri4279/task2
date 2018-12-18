@@ -26,7 +26,9 @@ export class HomeComponent implements OnInit {
  
   ngOnInit() {
 
-    this.cs.cService().subscribe(cn=>{this.cn=cn} )
+    this.cs.cService().subscribe( cn => {
+      this.cn = cn
+    })
     
   }
 

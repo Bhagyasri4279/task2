@@ -12,7 +12,7 @@ export class CartserviceService {
 
   os : Observable<any>;
   private sub = new Subject();
-
+  private cartCount = 0
   private sproducts=[
     {
       'name':'string',
@@ -26,9 +26,9 @@ export class CartserviceService {
 
    addProduct(cn:number){
     console.log('services method');
-     this.sub.next(cn);
+    this.cartCount = this.cartCount + cn
+     this.sub.next(this.cartCount);
      return cn;
-      
    }  
 
   constructor(private http:HttpClient) {

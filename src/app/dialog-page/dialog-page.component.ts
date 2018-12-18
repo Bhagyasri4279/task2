@@ -25,13 +25,13 @@ export class DialogPageComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  private c=0;
+  // private c=0;
   private t;
 
  cart(){
-  this.c = this.c + 1;
-  this.cs.addProduct(this.c);
-    this.t=this.c;
+  // this.c = this.c + 1;
+  this.cs.addProduct(1);
+    // this.t=this.c;
  }
 
 }
