@@ -25,5 +25,28 @@ export class EmpServiceService {
 
   }
 
+  // getStudents(){
+  //   return this.http.get('http://172.17.15.68:3000/');
+        
+  // }
+
+
+  // getStudentId(){
+ 
+        
+  // }
+
+  // poststudent(){
+    
+  // }
+
+  // putStudent(){
+
+  // }
+
+  // delStudent(){
+
+  // }
+
   constructor(private http:HttpClient) { }
 }
